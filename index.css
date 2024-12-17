@@ -1,0 +1,81 @@
+/* Projects Gallery */
+
+.lookbook-gallery {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  
+  .lookbook-grid {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .work_grid_cell {
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    width: 100%;
+    position: relative;
+  }
+  
+  .work_grid_cell:hover .overlay {
+    opacity: 0.9; /* Show the overlay on hover */
+    background-color: var(--eerie-black);
+  }
+  
+  .work_grid_cell .overlay {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    opacity: 0; /* Start with the overlay hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    border-radius: 2%;
+  }
+
+  .model {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 0; /* before wasn't included */
+    position: relative; /* before wasn't included */
+  }
+  
+  .model-hed-link {
+    color: var(--mindaro);
+    text-decoration: none;
+  }
+  
+  .model-hed {
+    width: 100%;
+    text-align: center;
+    margin-top: 40%;
+  }
+  
+  .link_with_icon_index {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 0.5em;
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .link_with_icon_index img {
+    width: 100%;
+  }
+  
+  figcaption p {
+    margin-top: 20%;
+    width: 100%;
+    text-align: center;
+  }

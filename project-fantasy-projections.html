@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+    <header>
+        <title>Ryan Shaffer | Maker Portfolio</title>
+        <link rel="canonical" href="https://ryanshaffer1.github.io">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    </header>
+
+    <body class="vsc-initialized">
+        <custom-header></custom-header>
+
+        <section id="summary" class="common-flexbox">
+            <div>
+                <img src="fantasy-projections/resources/fantasy_projections_logo.png" id="project_logo" alt="Logo for Fantasy Projections">
+            </div>
+            <div>
+                <h2 id="project_title">Fantasy Projections</h2>
+                <p class="paragraph">
+                    Goal: Design and train a Neural Network to accurately predict an NFL player’s final game stats and Fantasy Football score, 
+                    given pre-game context and/or a mid-game snapshot of the player’s ongoing performance.
+                </p>
+                <p>Development Timeline: 2024-Present</p>
+                <p>Tags:</p>
+                <ul class="tags-list">
+                    <li style="  border-color: var(--mindaro); color: var(--mindaro);">Python</li>
+                    <li style="  border-color: var(--cadet-gray); color: var(--cadet-gray);">Machine Learning</li>
+                    <li style="  border-color: var(--copper); color: var(--copper);">pytorch</li>
+                    <li style="  border-color: var(--mindaro); color: var(--mindaro);">Software Architecture</li>
+                    <li style="  border-color: var(--cadet-gray); color: var(--cadet-gray);">Unit Testing</li>
+                    <li style="  border-color: var(--copper); color: var(--copper);">Optimization</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="description">
+            <div>
+                <h2>Project Description</h2>
+                <div class="common-flexbox">
+                    <div class="paragraph description-text">
+                        <p>
+                            This project was my first foray into Machine Learning. 
+                            I started by listing out the variables that a human might use to predict ahead of time whether an NFL player will do well or poorly: 
+                            the player's name, their team and opponent, the record of both teams, their stats from previous games, etc. 
+                            I added the variables that would influence this prediction as the game plays out: the game score, who has the ball, the player's stats so far... 
+                            Before long, there were nearly 400 unique variables taken into account.
+                        </p>
+                        <p>
+                            These variables can be taken from online sources for every past NFL game in the last several decades. 
+                            I've only looked at the 2021-2023 period, and focused on the 300 top NFL players by Fantasy Football score.
+                            That still leaves me with 610,000 unique mid-game Fantasy score predictions to make. 
+                            Since we also know the true Fantasy score for every player in past games, we can use the true data to train a Neural Net 
+                            to identify patterns in which players tend to excel in which types of stats (passing, rushing, etc).
+                            The resulting predictions can be surprisingly good - check out the accuracy metrics below.
+                        </p>
+                        <p>
+                            The Neural Net is fairly rudimentary, with the baseline configuration holding just under 50k learnable parameters. 
+                            I've found an initial embedding layer that keeps categorical data (e.g. Player ID, Team ID) separated to be effective in extracting some meaning out of those categories (i.e., which players are "good" at certain stats).
+                            The biggest contributor to Neural Net effectiveness (measured by average Fantasy point difference between prediction and truth) so far has been 
+                            optimizing the Net's hyper-parameters using a recursive grid search.
+                        </p>
+                        <p>
+                            The source code is written entirely in Python, with a strong focus on generalization to new ML and optimization techniques, 
+                            new configurations (like different Fantasy Football rules), and eventual application to a user-friendly Fantasy Football manager and simulator app.
+                        </p>
+                        <p> 
+                            Through this project, I've learned the theory and basic implementation of Neural Networks, a core component of the ML/AI capabilities
+                            that are now everywhere. I've gotten much better at writing Python and at general software development. 
+                            I'm working on robust testing, documentation, continuous integration... just don't call me a Software Engineer yet!
+                        </p>
+
+                    </div>
+                    <div class="project-sidebar">
+                        <h4>Broad Concepts Learned</h4>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Software Architecture</li>
+                            <li>Object-Oriented Programming</li>
+
+                        </ul>
+                        <h4>Software Stats</h4>
+                        <ul>
+                            <li>Languages:</li>
+                            <ul class="bullet-list">
+                                <li>Python: 100%</li>
+                            </ul>
+                            <li>Total Lines of Code: 5.3k</li>
+                            <li>Test Coverage: 40% (186 unit tests)</li>
+                            <li>Libraries:
+                                <ul class="bullet-list">
+                                    <li>pytorch</li>
+                                    <li>pandas</li>
+                                    <li>numpy</li>
+                                    <li>matplotlib</li>
+                                </ul>
+
+                        </ul>
+
+                        <h4>Other Smart Things</h4>
+                        <ul>
+                            <li>Unit Testing</li>
+                            <li>PEP8, Linting</li>
+                            <li>Optimization Techniques</li>
+                        </ul>
+
+                        <h4>Project Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/ryanshaffer1/FantasyProjections">Github</a></li>
+                            <li><a href="http://neuralnetworksanddeeplearning.com/index.html">Neural Networks and Deep Learning</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="highlights">
+            <h2>Highlights</h2>
+            <h3>Current Prediction Accuracy</h3>
+            <div class="project-gallery common-flexbox">
+                <figure>
+                    <img src="fantasy-projections/resources/prediction_accuracy_vs_sleeper.png" class="gallery_image" alt="Comparison of Prediction Accuracy To Sleeper App">
+                    <figcaption>Comparison of Prediction Accuracy To Sleeper App</figcaption>
+                </figure>
+                <figure>
+                    <img src="fantasy-projections/resources/player_timeline_example.png" class="gallery_image" alt="Example of Mid-Game Prediction Updates">
+                    <figcaption>Example of Mid-Game Prediction Updates</figcaption>
+                </figure>
+            </div>
+            <h3>Implementation Details</h3>
+            <div class="project-gallery common-flexbox">
+                <figure>
+                    <img src="fantasy-projections/resources/network_architecture.png" class="gallery_image" alt="Network Architecture">
+                    <figcaption>Network Architecture</figcaption>
+                </figure>
+                <figure>
+                    <img src="fantasy-projections/resources/grid_search_results.png" class="gallery_image" alt="Hyper-Parameter Optimization">
+                    <figcaption>Hyper-Parameter Optimization</figcaption>
+                </figure>
+            </div>
+            <h3>Full Project Presentation</h3>
+            <a href="https://github.com/ryanshaffer1/FantasyProjections/tree/main/docs">Link to Presentation</a>
+
+
+        </section>
+
+        <custom-footer></custom-footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>
