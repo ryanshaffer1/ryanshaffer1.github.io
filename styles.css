@@ -81,8 +81,11 @@ h3{
 }
 
 #github_link {
+  display: flex;
+  align-items: center;
   margin-right: 3%;
-  width: 5%;
+  width: 13%;
+  color: var(--lavender-web);
 }
 
 #github_img {

@@ -11,6 +11,7 @@ class Header extends HTMLElement {
                     <h1>Ryan Shaffer</h1>
                 </a>
                 <a href="https://github.com/ryanshaffer1" id="github_link" class="no-underline">
+                    ryanshaffer1
                     <img src="common_resources/github-icon.png" id="github_img">
                 </a>
             </div>
