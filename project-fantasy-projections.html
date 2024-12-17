@@ -9,7 +9,7 @@
 
     </header>
 
-    <body class="vsc-initialized">
+    <body id="project" class="vsc-initialized">
         <custom-header></custom-header>
 
         <section id="summary" class="common-flexbox">
@@ -18,13 +18,17 @@
             </div>
             <div>
                 <h2 id="project_title">Fantasy Projections</h2>
-                <p class="paragraph">
+                <p id="short-description" class="paragraph">
+                    A Neural Network that accurately predicts an NFL player’s final game stats and Fantasy Football score, and updates 
+                    that prediction as the game progresses.
+                </p>
+                <!-- <p class="paragraph">
                     Goal: Design and train a Neural Network to accurately predict an NFL player’s final game stats and Fantasy Football score, 
                     given pre-game context and/or a mid-game snapshot of the player’s ongoing performance.
-                </p>
-                <p>Development Timeline: 2024-Present</p>
+                </p> -->
+                <p>Development Timeline: <span id="timeline">2024-Present</span></p>
                 <p>Tags:</p>
-                <ul class="tags-list">
+                <ul id="tags-list" class="tags-list">
                     <li style="  border-color: var(--mindaro); color: var(--mindaro);">Python</li>
                     <li style="  border-color: var(--cadet-gray); color: var(--cadet-gray);">Machine Learning</li>
                     <li style="  border-color: var(--copper); color: var(--copper);">pytorch</li>
@@ -83,10 +87,9 @@
                         <h4>Software Stats</h4>
                         <ul>
                             <li>Languages:</li>
-                            <ul class="bullet-list">
-                                <li>Python: 100%</li>
+                            <ul class="bullet-list" id="language-list">
                             </ul>
-                            <li>Total Lines of Code: 5.3k</li>
+                            <li>Total Lines of Code: <span id="total_loc"></span></li>
                             <li>Test Coverage: 40% (186 unit tests)</li>
                             <li>Libraries:
                                 <ul class="bullet-list">
