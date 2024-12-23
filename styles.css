@@ -21,6 +21,10 @@ body{
     width: 100%;
 }
 
+.hide{
+  display: none;
+}
+
 img {
   min-width: 10em;
   max-width: 100%;
@@ -74,6 +78,15 @@ h3{
   align-items: center;
   width: 100%;
   justify-content: space-between;
+}
+
+#title-block{
+  display:inline-flex;
+  align-items: baseline;
+}
+#title-block h4{
+  padding-left: 10px;
+  color: var(--cadet-gray)
 }
 
 #name {
@@ -197,4 +210,3 @@ h3{
 .project-gallery figure figcaption {
   margin-top: 10px;
 }
-

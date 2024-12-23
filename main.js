@@ -8,7 +8,10 @@ class Header extends HTMLElement {
         <section id="headerblock" class="headerblock">
             <div class="menubar">
                 <a href="index.html" id="name" class="no-underline">
-                    <h1>Ryan Shaffer</h1>
+                    <div id="title-block">
+                        <h1>Ryan Shaffer</h1>
+                        <h4>makes things sometimes</h4>
+                    </div>
                 </a>
                 <a href="https://github.com/ryanshaffer1" id="github_link" class="no-underline">
                     ryanshaffer1

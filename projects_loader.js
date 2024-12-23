@@ -5,7 +5,7 @@ if (document.body.id == "index"){
 
 // Builds Project Gallery from HTML pages
 async function generate_project_gallery(){
-    let project_pages = ["project-fantasy-projections.html"];
+    let project_pages = ["project-fantasy-projections.html", "project-led-matrix.html"];
     for (let i=0; i<project_pages.length; i++){
         let project_page = project_pages[i];
         newProject = append_blank_project_to_gallery();

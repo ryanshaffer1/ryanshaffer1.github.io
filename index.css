@@ -33,13 +33,14 @@
     right: 0;
     padding-left: 10%;
     padding-right: 10%;
+    align-content: center;
     text-align: center;
     justify-items: center;
-    align-items: center;
     opacity: 0; /* Start with the overlay hidden */
     transition: opacity 0.3s ease; /* Smooth transition */
     border-radius: 2%;
   }
+
 
   .model {
     text-align: center;
@@ -57,7 +58,6 @@
   .model-hed {
     width: 100%;
     text-align: center;
-    margin-top: 40%;
   }
   
   .link_with_icon_index {
@@ -73,9 +73,8 @@
   .link_with_icon_index img {
     width: 100%;
   }
-  
+
   figcaption p {
-    margin-top: 20%;
     width: 100%;
     text-align: center;
   }
