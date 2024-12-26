@@ -1,22 +1,23 @@
 /* Projects Gallery */
 
 .lookbook-gallery {
+    width: auto;
     padding-right: 10%;
     padding-left: 10%;
   }
   
   .lookbook-grid {
-    display: grid;
+    display: flex;
+    flex-flow: row wrap;
     column-gap: 30px;
     row-gap: 30px;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
   }
   
   .work_grid_cell {
     transition: transform 0.3s ease; /* Smooth scaling on hover */
-    width: 100%;
+    width: fit-content;
     position: relative;
+    margin: auto;
   }
   
   .work_grid_cell:hover .overlay {
@@ -45,9 +46,10 @@
   .model {
     text-align: center;
     display: inline-block;
-    width: 100%;
-    margin: 0; /* before wasn't included */
-    position: relative; /* before wasn't included */
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    position: relative;
   }
   
   .model-hed-link {
@@ -68,10 +70,14 @@
     text-align: center;
     display: inline-block;
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
   
   .link_with_icon_index img {
     width: 100%;
+    max-width: 400px;
+    min-width: 250px;
   }
 
   figcaption p {

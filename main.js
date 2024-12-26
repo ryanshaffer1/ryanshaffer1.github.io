@@ -6,18 +6,19 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <section id="headerblock" class="headerblock">
-            <div class="menubar">
-                <a href="index.html" id="name" class="no-underline">
-                    <div id="title-block">
-                        <h1>Ryan Shaffer</h1>
+
+            <a href="index.html" id="name" class="no-underline">
+                <div id="title-block">
+                    <h1>Ryan Shaffer</h1>
+                    <span id="subtitle">
                         <h4>makes things sometimes</h4>
-                    </div>
-                </a>
-                <a href="https://github.com/ryanshaffer1" id="github_link" class="no-underline">
-                    ryanshaffer1
-                    <img src="common_resources/github-icon.png" id="github_img">
-                </a>
-            </div>
+                    </span>
+                </div>
+            </a>
+            <a href="https://github.com/ryanshaffer1" id="github_link" class="no-underline">
+                ryanshaffer1
+                <img src="common_resources/github-icon.png" id="github_img">
+            </a>
         </section>  
         `;
     }
