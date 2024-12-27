@@ -5,7 +5,8 @@ if (document.body.id == "index"){
 
 // Builds Project Gallery from HTML pages
 async function generate_project_gallery(){
-    let project_pages = ["project-fantasy-projections.html", "project-led-matrix.html"];
+    let project_pages = ["fantasy-projections/index.html", 
+                         "led-matrix/index.html"];
     for (let i=0; i<project_pages.length; i++){
         let project_page = project_pages[i];
         newProject = append_blank_project_to_gallery();
@@ -50,6 +51,7 @@ function append_blank_project_to_gallery(){
 
 // Sets data in projects gallery to match data from project page
 async function load_project_data_to_gallery(project_page, newProject){
+    project_folder = project_page.split('/')[0] + '/';
     // Obtain html from file
     let html = await html_from_filename(project_page);
     // Set HTML link for image and title in projects gallery to point to project page
@@ -59,8 +61,9 @@ async function load_project_data_to_gallery(project_page, newProject){
     let project_title = html.querySelector("#project_title").textContent;
     newProject.querySelector("#project-title").textContent = project_title;
     // Get source of project logo and set the same in projects gallery
-    let logo_image_src = html.querySelector("#project_logo").src;
-    newProject.querySelector("#logo_image").src = logo_image_src;
+    let logo_image = html.querySelector("#project_logo");
+    let logo_image_src = logo_image.attributes['src'].value;
+    newProject.querySelector("#logo_image").src = project_folder+logo_image_src;
     // Get short description and set the same in projects gallery
     let description = html.querySelector("#short-description").textContent;
     newProject.querySelector("#short-description").textContent = description;

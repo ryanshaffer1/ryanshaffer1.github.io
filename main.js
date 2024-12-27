@@ -7,7 +7,7 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <section id="headerblock" class="headerblock">
 
-            <a href="index.html" id="name" class="no-underline">
+            <a href="../index.html" id="name" class="no-underline">
                 <div id="title-block">
                     <h1>Ryan Shaffer</h1>
                     <span id="subtitle">
@@ -17,7 +17,7 @@ class Header extends HTMLElement {
             </a>
             <a href="https://github.com/ryanshaffer1" id="github_link" class="no-underline">
                 ryanshaffer1
-                <img src="common_resources/github-icon.png" id="github_img">
+                <img src="../common_resources/github-icon.png" id="github_img">
             </a>
         </section>  
         `;
@@ -44,7 +44,7 @@ customElements.define('custom-footer', Footer);
 // Automatically set software stats from VSCodeCounter file
 async function readLOC() {
     // Read Markdown file with VSCodeCounter results
-    let response = await fetch("fantasy-projections/resources/results.md");
+    let response = await fetch("resources/results.md");
     // Parse results to obtain the total lines of code and the breakdown by language
     let contents = await response.text();
     let split_contents = contents.split("##");
