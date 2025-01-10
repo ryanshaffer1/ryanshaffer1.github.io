@@ -31,15 +31,15 @@ function append_blank_project_to_gallery(){
                         <a id="project-title" class="model-hed-link"></a>
                     </h3>    
                 </div>
-                <div>
+                <div class="resizable">
                     <p id="short-description">
                     </p>    
                 </div>
-                <div>
+                <div class="resizable">
                     <p id="timeline">
                     </p>    
                 </div>
-                <div>
+                <div class="resizable">
                     <ul id="tags-list" class="tags-list">
                     </ul>    
                 </div>

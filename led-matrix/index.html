@@ -39,15 +39,7 @@
         <section id="description">
             <div>
                 <h2>Project Description</h2>
-                <div class="common-flexbox">
-                    <div class="paragraph description-text">
-                        <p>
-                            Coming soon...
-                            <!-- Talk about microcontroller selection -->
-                             <!-- Other topics -->
-                        </p>
-
-                    </div>
+                <div class="common-flexbox flipped">
                     <div class="project-sidebar">
                         <h4>Broad Concepts Learned</h4>
                         <ul>
@@ -90,7 +82,66 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="paragraph description-text">
+                        <p>
+                            My inspiration for this project came not from ultra-HD screens, but from the old-fashioned mechanical displays 
+                            that once showed train and bus schedules. Other makers have created beautiful looking - and sounding - mechanical displays, 
+                            like <span><a href="https://hackaday.io/project/159415-flip-dot-display-diy-controller/log/152569-daisy-chained">these flip-dots</a></span> 
+                            (I recommend reading the whole blog for a fun project story). I wanted to replicate this so badly, but I was deterred by the cost of flip-dots.
+                            Instead, I thought I might enjoy a similarly retro feel, for a fraction of the price, with a low-resolution LED pixel display. 
+                            I did some research into LED control, learned about WS2812b and individually-addressable LEDs, and bought a few cheap 16x16 grids to start experimenting with.
+                        </p>
+                        <p>
+                            With those LEDs and a spare Arduino Uno, I was able to get started. 
+                            I breadboarded out the electrical connections between the Arduino microcontroller and 4 grids, making a 32x32 display.
+                            After a good bit of debugging, I could print text and draw simple shapes.
+                            However, the Arduino was already running out of memory space by holding the red, green, and blue colors for each of 1,024 LEDs,
+                            limiting the fun software I could program into the controller. 
+                            Also, I envisioned the final product being controllabe from a webpage or web app, which would be a little difficult with an Arduino Uno.
+                            I made the decision to change microcontrollers, first playing with an Arduino Mega (more memory, but no built-in WiFi), and then settling on an ESP-32. 
+                            This microcontroller gave me a lot more memory to work with (a whole 8MB of flash, wow!!) and out-of-the-box Wi-Fi connectivity. Much easier!
+                        </p>
+                        <p>
+                            With a better computer, my visions for the product grew. Instead of just text, I could do some image processing. 
+                            This led to the Image Display mode with uploaded and hand-drawn images.
+                            The computer could handle some simple physics simulations, so before long it had both a simulated fireplace and a (non-physical) plasma wave display.
+                            It could connect to API endpoints over the web easily, and I reluctantly made the product slightly functional: it can tell you the time and the next DC metro train. 
+                            This computer could even compute some hefty discrete Fourier Transforms, so I bought a cheap microphone to create the classic bass-bumping music visualization.
+                        </p>
+                        <p>
+                            The full list of parts I bought for this build are on Github, as are the custom 3D-printed pieces of the frame. 
+                            The frame is sized to surround the 32x32 LED grid tightly, with extra space on the bottom to house other components, 
+                            like the power supply connector, microphone, and mode control push button. 
+                            It is also a thick frame to cover the ESP-32 mounted behind the LEDs. 
+                            Because of the size of the grid, the frame was too big to 3D-print at once, and had to be assembled with lots of screws.
+                            In front of the LEDs is a sheet of diffusive black acryllic, protecting the delicate parts and spreading the light out. 
+                            This acryllic only came in sheets smaller than the display needed, so extra had to be glued onto the edges, leaving an unsightly seam.
+                            Besides that, it looks passably sleek with the black PLA frame and flush components.
+                        </p>
+                        <p>
+                            On top of its handling of signals to each LED, the ESP-32 microcontroller runs a web server on my local network. 
+                            It serves static webpages to local devices which can be used to change the LED display modes and set details of each display mode, like
+                            the text color or image source. 
+                            The QR code on the front of the frame takes users right to the main control page, so using the display is a breeze!
+                            The web server process was new for me, and learning the web stack was very different from my clunky C++ controlling the ESP-32's internal logic.
+                            I compensated by writing equally clunky Javascript, and including the bare minimum CSS to make my User Interface designer friends wince every time.
+                        </p>
+                        <p>
+                            There are many things I would change if I started over, and many things I can change in software at any time. I've tried to capture them 
+                            all in my Github documentation. Many of them are lessons learned on the mechanical design - better wire management, better mounts for the 
+                            microphone and push button and ESP-32, etc. 
+                            Others are related to the web server: my UI is very lacking, for one, and I'd also love for it to update live, so you can play Pong or PacMan.
+                            I do hope I get to them someday.
+                        </p>
+                        <p>
+                            Overall, this project is a clunky and immediately-obsolete art piece that I am quite proud of. 
+                            It was never meant to be useful - we are surrounded by much more useful electronic displays at all times anyway.
+                            But it is very fun, in a nostalgic 8-bit way, to put up a grossly-pixelated selfie of your friend in the living room, 
+                            or leave a message for a loved one, and see every dot of electricity working together to make it look just okay.
 
+                        </p>
+
+                    </div>
                 </div>
             </div>
         </section>

@@ -130,11 +130,15 @@ h3{
 .common-flexbox {
   display: flex;
   flex-flow: row wrap;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   justify-self: center;
   justify-content: center;
   align-content: center;
+}
+
+.flipped {
+  flex-flow: row-reverse wrap;
 }
 
 .common-flexbox > * {
@@ -160,11 +164,12 @@ h3{
 }
 
 .description-text {
-  max-width: 600px;
+  max-width: 700px;
   text-align: left;
 }
 
 .project-sidebar {
+  height: fit-content;
   min-width: 250px;
   max-width: 400px;
   background-color: var(--cadet-gray);
@@ -191,11 +196,12 @@ h3{
 }
 
 .project-gallery {
-  width: 80%;
+  margin: auto;
+  width: 90%;
 }
 
 .project-gallery > * {
-  min-width: 400px;
+  min-width: 380px;
   width: 45%;
   max-width: 100%;
   height: auto;
@@ -205,6 +211,7 @@ h3{
 
 .project-gallery figure figcaption {
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* Project tags */
