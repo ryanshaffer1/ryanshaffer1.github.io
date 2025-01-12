@@ -69,7 +69,7 @@
   
   .model-hed-link {
     color: var(--mindaro);
-    text-decoration: none;
+    text-decoration: underline;
   }
   
   .model-hed {
